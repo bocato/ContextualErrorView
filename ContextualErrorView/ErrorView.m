@@ -14,7 +14,7 @@
 
 - (void)checkIfTheClassConformsWithErrorViewDelegate {
     if (![self conformsToProtocol:@protocol(ErrorViewDelegate)]){
-        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"You must conform to protocol SomeProtocol to access this method.",NSStringFromSelector(_cmd)] userInfo:nil];
+        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"You must conform to protocol ErrorViewDelegate to access this method."] userInfo:nil];
     }
 }
 
