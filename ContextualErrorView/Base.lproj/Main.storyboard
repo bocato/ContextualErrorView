@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LHf-Cw-xL2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="0Ce-Oe-kvT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0V-Cw-WFm">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqG-H3-J6j" userLabel="Show Error View Full Button">
+                                        <rect key="frame" x="67.5" y="225.5" width="240" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="M3T-y4-htv"/>
+                                            <constraint firstAttribute="height" constant="44" id="XDI-nz-9EN"/>
+                                        </constraints>
+                                        <state key="normal" title="Show Error View (FullView)">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showErrorViewOnFullViewTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpe-X2-PAo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIZ-H2-3Ao" userLabel="Show Error View Lower Button">
+                                        <rect key="frame" x="67.5" y="279.5" width="240" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="AIQ-wr-OZg"/>
+                                            <constraint firstAttribute="height" constant="44" id="tFr-cd-ch1"/>
+                                        </constraints>
+                                        <state key="normal" title="Show Error View (LowerView)">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showErrorViewOnLowerViewTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RI6-8w-9dV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.4823529412" green="0.047058823530000002" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="AIZ-H2-3Ao" firstAttribute="centerX" secondItem="tqG-H3-J6j" secondAttribute="centerX" id="Neh-cB-cgT"/>
+                                    <constraint firstItem="tqG-H3-J6j" firstAttribute="centerX" secondItem="t0V-Cw-WFm" secondAttribute="centerX" id="Pza-bj-cHf"/>
+                                    <constraint firstItem="AIZ-H2-3Ao" firstAttribute="top" secondItem="tqG-H3-J6j" secondAttribute="bottom" constant="10" id="TNk-4I-TVK"/>
+                                    <constraint firstItem="tqG-H3-J6j" firstAttribute="centerY" secondItem="t0V-Cw-WFm" secondAttribute="centerY" constant="-54" id="leZ-rc-2cj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LHf-Cw-xL2" secondAttribute="trailing" id="58u-l5-98a"/>
+                            <constraint firstItem="LHf-Cw-xL2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AVc-1a-nKK"/>
+                            <constraint firstItem="LHf-Cw-xL2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VCA-P5-jKd"/>
+                            <constraint firstAttribute="trailing" secondItem="t0V-Cw-WFm" secondAttribute="trailing" id="dkO-pb-wnC"/>
+                            <constraint firstItem="t0V-Cw-WFm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jBt-y3-hhk"/>
+                            <constraint firstItem="t0V-Cw-WFm" firstAttribute="top" secondItem="LHf-Cw-xL2" secondAttribute="bottom" id="jJk-Xt-vCF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t0V-Cw-WFm" secondAttribute="bottom" id="xCZ-4V-oJq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lowerView" destination="t0V-Cw-WFm" id="0tk-QX-mrc"/>
+                        <outlet property="upperView" destination="LHf-Cw-xL2" id="0xk-XB-D4z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

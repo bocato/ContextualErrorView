@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9691F9F66C6C5B499231DAA8 /* libPods-ContextualErrorViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6566950D04EF6A938AE5AAE /* libPods-ContextualErrorViewTests.a */; };
+		AB3F6306AB9843D96DAFA63C /* libPods-ContextualErrorViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C9C11D7A3C04D7AFBDA1BE /* libPods-ContextualErrorViewUITests.a */; };
+		D6520DDFA4D37751E0495BA8 /* libPods-ContextualErrorView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D581E3DEEF8D70F3741C1D07 /* libPods-ContextualErrorView.a */; };
 		E5C3B3B11E623437009D633F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C3B3B01E623437009D633F /* main.m */; };
 		E5C3B3B41E623437009D633F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C3B3B31E623437009D633F /* AppDelegate.m */; };
 		E5C3B3B71E623437009D633F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C3B3B61E623437009D633F /* ViewController.m */; };
@@ -15,6 +18,7 @@
 		E5C3B3BF1E623437009D633F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C3B3BD1E623437009D633F /* LaunchScreen.storyboard */; };
 		E5C3B3CA1E623437009D633F /* ContextualErrorViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C3B3C91E623437009D633F /* ContextualErrorViewTests.m */; };
 		E5C3B3D51E623437009D633F /* ContextualErrorViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C3B3D41E623437009D633F /* ContextualErrorViewUITests.m */; };
+		E5C3B3E41E623688009D633F /* ErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C3B3E31E623688009D633F /* ErrorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FE5FF0F2BC4DC83087D33D2 /* Pods-ContextualErrorViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContextualErrorViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContextualErrorViewTests/Pods-ContextualErrorViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3235CBDC1C7EFE2156A4C847 /* Pods-ContextualErrorView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContextualErrorView.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContextualErrorView/Pods-ContextualErrorView.release.xcconfig"; sourceTree = "<group>"; };
+		32C7308BDB43A1826C83144B /* Pods-ContextualErrorViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContextualErrorViewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContextualErrorViewUITests/Pods-ContextualErrorViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5215CD1B3F05B2DA185CDDA1 /* Pods-ContextualErrorView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContextualErrorView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContextualErrorView/Pods-ContextualErrorView.debug.xcconfig"; sourceTree = "<group>"; };
+		742173A5ECB1E02A3B36D375 /* Pods-ContextualErrorViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContextualErrorViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContextualErrorViewUITests/Pods-ContextualErrorViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B0C9C11D7A3C04D7AFBDA1BE /* libPods-ContextualErrorViewUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContextualErrorViewUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6566950D04EF6A938AE5AAE /* libPods-ContextualErrorViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContextualErrorViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D581E3DEEF8D70F3741C1D07 /* libPods-ContextualErrorView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContextualErrorView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C3B3AC1E623437009D633F /* ContextualErrorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContextualErrorView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C3B3B01E623437009D633F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5C3B3B21E623437009D633F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +63,9 @@
 		E5C3B3D01E623437009D633F /* ContextualErrorViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContextualErrorViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C3B3D41E623437009D633F /* ContextualErrorViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContextualErrorViewUITests.m; sourceTree = "<group>"; };
 		E5C3B3D61E623437009D633F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5C3B3E21E623688009D633F /* ErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorView.h; sourceTree = "<group>"; };
+		E5C3B3E31E623688009D633F /* ErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorView.m; sourceTree = "<group>"; };
+		FA6EB1F22D4CF5245BBC1A14 /* Pods-ContextualErrorViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContextualErrorViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContextualErrorViewTests/Pods-ContextualErrorViewTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6520DDFA4D37751E0495BA8 /* libPods-ContextualErrorView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9691F9F66C6C5B499231DAA8 /* libPods-ContextualErrorViewTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +89,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3F6306AB9843D96DAFA63C /* libPods-ContextualErrorViewUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15B35A224A916F5626EE7C8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5215CD1B3F05B2DA185CDDA1 /* Pods-ContextualErrorView.debug.xcconfig */,
+				3235CBDC1C7EFE2156A4C847 /* Pods-ContextualErrorView.release.xcconfig */,
+				1FE5FF0F2BC4DC83087D33D2 /* Pods-ContextualErrorViewTests.debug.xcconfig */,
+				FA6EB1F22D4CF5245BBC1A14 /* Pods-ContextualErrorViewTests.release.xcconfig */,
+				32C7308BDB43A1826C83144B /* Pods-ContextualErrorViewUITests.debug.xcconfig */,
+				742173A5ECB1E02A3B36D375 /* Pods-ContextualErrorViewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9A4C6F6AC643F8669B0DE07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D581E3DEEF8D70F3741C1D07 /* libPods-ContextualErrorView.a */,
+				C6566950D04EF6A938AE5AAE /* libPods-ContextualErrorViewTests.a */,
+				B0C9C11D7A3C04D7AFBDA1BE /* libPods-ContextualErrorViewUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E5C3B3A31E623437009D633F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +126,8 @@
 				E5C3B3C81E623437009D633F /* ContextualErrorViewTests */,
 				E5C3B3D31E623437009D633F /* ContextualErrorViewUITests */,
 				E5C3B3AD1E623437009D633F /* Products */,
+				15B35A224A916F5626EE7C8E /* Pods */,
+				C9A4C6F6AC643F8669B0DE07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +148,8 @@
 				E5C3B3B31E623437009D633F /* AppDelegate.m */,
 				E5C3B3B51E623437009D633F /* ViewController.h */,
 				E5C3B3B61E623437009D633F /* ViewController.m */,
+				E5C3B3E21E623688009D633F /* ErrorView.h */,
+				E5C3B3E31E623688009D633F /* ErrorView.m */,
 				E5C3B3B81E623437009D633F /* Main.storyboard */,
 				E5C3B3BB1E623437009D633F /* Assets.xcassets */,
 				E5C3B3BD1E623437009D633F /* LaunchScreen.storyboard */,
@@ -147,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5C3B3D91E623437009D633F /* Build configuration list for PBXNativeTarget "ContextualErrorView" */;
 			buildPhases = (
+				79759360C1AF3D15D19F7AD1 /* [CP] Check Pods Manifest.lock */,
 				E5C3B3A81E623437009D633F /* Sources */,
 				E5C3B3A91E623437009D633F /* Frameworks */,
 				E5C3B3AA1E623437009D633F /* Resources */,
+				7E604F71435BC27BB483BAFB /* [CP] Embed Pods Frameworks */,
+				F511D6E9D8C712E296DF816E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5C3B3DC1E623437009D633F /* Build configuration list for PBXNativeTarget "ContextualErrorViewTests" */;
 			buildPhases = (
+				6B5B9E590B3304F2AF3341CD /* [CP] Check Pods Manifest.lock */,
 				E5C3B3C11E623437009D633F /* Sources */,
 				E5C3B3C21E623437009D633F /* Frameworks */,
 				E5C3B3C31E623437009D633F /* Resources */,
+				16EB101555EDA355FC872627 /* [CP] Embed Pods Frameworks */,
+				6715DFD783EA3D4200C32A1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5C3B3DF1E623437009D633F /* Build configuration list for PBXNativeTarget "ContextualErrorViewUITests" */;
 			buildPhases = (
+				42A1D8FAB0B2AC0A32AA5552 /* [CP] Check Pods Manifest.lock */,
 				E5C3B3CC1E623437009D633F /* Sources */,
 				E5C3B3CD1E623437009D633F /* Frameworks */,
 				E5C3B3CE1E623437009D633F /* Resources */,
+				4622388270AE0A5C7A9C2A11 /* [CP] Embed Pods Frameworks */,
+				775EC38F1F3A14036D6BC7FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,6 +325,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16EB101555EDA355FC872627 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContextualErrorViewTests/Pods-ContextualErrorViewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42A1D8FAB0B2AC0A32AA5552 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4622388270AE0A5C7A9C2A11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContextualErrorViewUITests/Pods-ContextualErrorViewUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6715DFD783EA3D4200C32A1C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContextualErrorViewTests/Pods-ContextualErrorViewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B5B9E590B3304F2AF3341CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		775EC38F1F3A14036D6BC7FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContextualErrorViewUITests/Pods-ContextualErrorViewUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79759360C1AF3D15D19F7AD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E604F71435BC27BB483BAFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContextualErrorView/Pods-ContextualErrorView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F511D6E9D8C712E296DF816E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContextualErrorView/Pods-ContextualErrorView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E5C3B3A81E623437009D633F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -279,6 +471,7 @@
 				E5C3B3B71E623437009D633F /* ViewController.m in Sources */,
 				E5C3B3B41E623437009D633F /* AppDelegate.m in Sources */,
 				E5C3B3B11E623437009D633F /* main.m in Sources */,
+				E5C3B3E41E623688009D633F /* ErrorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +618,7 @@
 		};
 		E5C3B3DA1E623437009D633F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5215CD1B3F05B2DA185CDDA1 /* Pods-ContextualErrorView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LJ52F3Z7TA;
@@ -437,6 +631,7 @@
 		};
 		E5C3B3DB1E623437009D633F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3235CBDC1C7EFE2156A4C847 /* Pods-ContextualErrorView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LJ52F3Z7TA;
@@ -449,6 +644,7 @@
 		};
 		E5C3B3DD1E623437009D633F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FE5FF0F2BC4DC83087D33D2 /* Pods-ContextualErrorViewTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = LJ52F3Z7TA;
@@ -462,6 +658,7 @@
 		};
 		E5C3B3DE1E623437009D633F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA6EB1F22D4CF5245BBC1A14 /* Pods-ContextualErrorViewTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = LJ52F3Z7TA;
@@ -475,6 +672,7 @@
 		};
 		E5C3B3E01E623437009D633F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32C7308BDB43A1826C83144B /* Pods-ContextualErrorViewUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = LJ52F3Z7TA;
 				INFOPLIST_FILE = ContextualErrorViewUITests/Info.plist;
@@ -487,6 +685,7 @@
 		};
 		E5C3B3E11E623437009D633F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742173A5ECB1E02A3B36D375 /* Pods-ContextualErrorViewUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = LJ52F3Z7TA;
 				INFOPLIST_FILE = ContextualErrorViewUITests/Info.plist;
@@ -516,6 +715,7 @@
 				E5C3B3DB1E623437009D633F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5C3B3DC1E623437009D633F /* Build configuration list for PBXNativeTarget "ContextualErrorViewTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +724,7 @@
 				E5C3B3DE1E623437009D633F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5C3B3DF1E623437009D633F /* Build configuration list for PBXNativeTarget "ContextualErrorViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +733,7 @@
 				E5C3B3E11E623437009D633F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
