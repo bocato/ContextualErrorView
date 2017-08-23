@@ -13,13 +13,23 @@
 #pragma mark - Delegate
 @protocol ErrorViewDelegate <NSObject>
 @optional
-- (void)showErrorView:(ErrorView *)errorView;
-- (void)hideErrorView:(ErrorView *)errorView;
+- (void)errorViewWillShow;
+- (void)errorViewDidShow;
+- (void)errorViewWillHide;
+- (void)errorViewDidHide;
+- (void)errorViewDidReceiveTouchUpInside;
 @end
 
 @interface ErrorView : UIControl
 
 #pragma mark - Properties
 @property (strong, nonatomic) id<ErrorViewDelegate> delegate;
+
+#pragma mark - Instantiation
++ (instancetype)instanciateNewInView:(UIView *)view;
+
+#pragma mark - Behavior
++ (void)showInView:(UIView *)view withDelegate:(id <ErrorViewDelegate> )delegate;
++ (void)hideForView:(UIView *)view;
 
 @end

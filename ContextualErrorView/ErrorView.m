@@ -9,27 +9,6 @@
 #import "ErrorView.h"
 #import "Masonry.h"
 
-#pragma mark - Delegate Default Implemetation
-@implementation NSObject(ErrorViewDelegate)
-
-- (void)checkIfTheClassConformsWithErrorViewDelegate {
-    if (![self conformsToProtocol:@protocol(ErrorViewDelegate)]){
-        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"You must conform to protocol ErrorViewDelegate to access this method."] userInfo:nil];
-    }
-}
-
-- (void)showErrorView:(ErrorView *)errorView {
-    [self checkIfTheClassConformsWithErrorViewDelegate];
-    errorView.hidden = false;
-}
-
-- (void)hideErrorView:(ErrorView *)errorView {
-    [self checkIfTheClassConformsWithErrorViewDelegate];
-    errorView.hidden = true;
-}
-
-@end
-
 #pragma mark - Constants
 static NSString *kApplicationDataDownloadTouchToRetryErrorViewMessage = @"Houve um erro ao carregar os dados da aplicação. Toque no botão abaixo para tentar novamente.";
 
@@ -44,13 +23,87 @@ static NSString *kApplicationDataDownloadTouchToRetryErrorViewMessage = @"Houve 
 
 #pragma mark - View LifeCycle
 - (instancetype)init {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         [self configureViewElements];
+        return self;
     }
-    return self;
+    return nil;
 }
 
+#pragma mark - Instantiation
++ (instancetype)instanciateNewInView:(UIView *)view {
+    ErrorView *errorView = [ErrorView new];
+    errorView.frame = view.frame;
+    [view addSubview:errorView];
+    [view bringSubviewToFront:errorView];
+    [errorView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.top.equalTo(view);
+    }];
+    [errorView addTarget:self action:@selector(footerButtonDidReceiveTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
+    errorView.alpha = 0;
+    return errorView;
+}
+
+#pragma mark - Behavior
++ (void)showInView:(UIView *)view withDelegate:(id <ErrorViewDelegate> )delegate {
+    ErrorView *errorView = [ErrorView instanciateNewInView:view];
+    errorView.delegate = delegate;
+    [errorView show];
+}
+
++ (NSPredicate *)errorViewPredicate {
+    return [NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
+        return [object isKindOfClass:ErrorView.class];
+    }];
+}
+
++ (void)hideForView:(UIView *)view {
+    ErrorView *currentVisibleErrorView = [view.subviews filteredArrayUsingPredicate:[ErrorView errorViewPredicate]].firstObject;
+    if (currentVisibleErrorView) {
+        [currentVisibleErrorView hideWithCompletion:nil];
+        [currentVisibleErrorView removeFromSuperview];
+    }
+}
+
+- (void)hideWithCompletion:(void (^)(void))completion {
+    if ([self isValidDelegateAndConformsToProtocol] && [self.delegate respondsToSelector:@selector(errorViewWillHide)]) {
+        [self.delegate errorViewWillHide];
+    }
+    [UIView animateWithDuration:0.25 animations:^{
+        self.alpha = 0;
+        self.hidden = YES;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            if ([self isValidDelegateAndConformsToProtocol] && [self.delegate respondsToSelector:@selector(errorViewDidHide)]) {
+                [self.delegate errorViewDidHide];
+            }
+        }
+        if (completion) {
+            completion();
+        }
+    }];
+}
+
+- (void)show {
+    if ([self isValidDelegateAndConformsToProtocol] && [self.delegate respondsToSelector:@selector(errorViewWillShow)]) {
+        [self.delegate errorViewWillShow];
+    }
+    self.hidden = false;
+    [UIView animateWithDuration:0.25 animations:^{
+        self.alpha = 1;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            if ([self isValidDelegateAndConformsToProtocol] && [self.delegate respondsToSelector:@selector(errorViewDidShow)]) {
+                [self.delegate errorViewDidShow];
+            }
+        }
+    }];
+}
+
+#pragma mark - Helpers
+- (BOOL)isValidDelegateAndConformsToProtocol {
+    return self.delegate && [self conformsToProtocol:@protocol(ErrorViewDelegate)];
+}
 
 #pragma mark - Layout Configuration
 - (void)configureImageView {
@@ -112,10 +165,13 @@ static NSString *kApplicationDataDownloadTouchToRetryErrorViewMessage = @"Houve 
     [self makeConstraints];
 }
 
-
 #pragma mark - Button Actions
 - (void)footerButtonDidReceiveTouchUpInside {
-    [self sendActionsForControlEvents:UIControlEventTouchUpInside];
+    [self hideWithCompletion:^{
+        if ([self isValidDelegateAndConformsToProtocol] && [self.delegate respondsToSelector:@selector(errorViewDidReceiveTouchUpInside)]) {
+            [self.delegate errorViewDidReceiveTouchUpInside];
+        }
+    }];
 }
 
 @end
